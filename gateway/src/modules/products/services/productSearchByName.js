@@ -13,6 +13,6 @@ export default async function productSearchByName(req, res) {
       res.status(response.status).json(response.data);
     })
     .catch((error) => {
-      res.status(400).json(message.fail('Get products by name. Error', error.response.data));
+      res.status(400).json(message.fail('Get products by name. Error', error.response?.data));
     });
 }

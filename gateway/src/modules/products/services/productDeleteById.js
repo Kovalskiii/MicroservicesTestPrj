@@ -12,6 +12,6 @@ export default async function productDeleteById(req, res) {
       res.status(response.status).json(response.data);
     })
     .catch((error) => {
-      res.status(400).json(message.fail('Product delete error. Error', error.response.data));
+      res.status(400).json(message.fail('Product delete error. Error', error.response?.data));
     });
 }
