@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "67e7c704-6356-4cd4-a988-f7a0ada138de",
+		"name": "MicroservicesTestPrj",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11449882"
+	},
+	"item": [
+		{
+			"name": "Product Create",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Iphone12 Pro\",\n    \"description\": \"Piece of art\",\n    \"productImages\": [\"https://www.google.md/url?sa=i&url=https%3A%2F%2Fwww.apple.com%2Fes%2Fshop%2Fproduct%2FFGDA3QL%2FA%2FRefurbished-iPhone-12-Pro-Max-128GB-Pacific-Blue-SIM-Free&psig=AOvVaw1iDTY5hIlfRlMI4H0S_r2d&ust=1671715400000000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCNDxq6bnivwCFQAAAAAdAAAAABA1\"],\n    \"price\": 1199.99,\n    \"currency\": \"usd\",\n    \"productIsActive\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/product/create",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"product",
+						"create"
+					]
+				},
+				"description": "Due to this request we can create product"
+			},
+			"response": []
+		},
+		{
+			"name": "Product Delete By Id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{host}}/product/63a37a87dd3223098ded56ff",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"product",
+						"63a37a87dd3223098ded56ff"
+					]
+				},
+				"description": "Due to this request we can delete product by it's id"
+			},
+			"response": []
+		},
+		{
+			"name": "Product Get All List",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{host}}/product/getAll",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"product",
+						"getAll"
+					]
+				},
+				"description": "Due to this request we can get products list"
+			},
+			"response": []
+		},
+		{
+			"name": "Product Get By Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{host}}/product/63a37a87dd3223098ded56ff",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"product",
+						"63a37a87dd3223098ded56ff"
+					]
+				},
+				"description": "Due to this request we can get product by it's id"
+			},
+			"response": []
+		},
+		{
+			"name": "Product Search By Name",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"name\": \"Iphone12\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/product/searchByName",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"product",
+						"searchByName"
+					]
+				},
+				"description": "Due to this request we can search products by name"
+			},
+			"response": []
+		}
+	]
+}
