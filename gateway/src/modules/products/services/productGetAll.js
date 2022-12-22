@@ -8,5 +8,6 @@ export default async function productGetAll(req, res) {
     })
     .catch((error) => {
       res.status(400).json(message.fail('Get all products. Error', error.response?.data));
+      console.log(error)
     });
 }
