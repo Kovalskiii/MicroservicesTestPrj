@@ -24,3 +24,10 @@ b)execute command: cd products;
 c)execute command: npm install (need to be executed once after project clone - to install packages);
 </br>
 d)execute command: npm run local;
+
+## 6)Docker - (for Windows users - install Docker Desktop https://www.docker.com/products/docker-desktop)
+a)to build use command: docker-compose build 
+</br>
+b)to start use command: docker-compose up
+</br>
+c)to stop use command: docker-compose down
