@@ -5,7 +5,7 @@
 ## 2)Database:
 Local mongo connection string : mongodb://127.0.0.1:27017/MicroservicesTestPrj
 </br>
-## 3)Postman collection and environment is located in products/docs/postman. Import files in Postman.
+## 3)Postman collection and environment is located in docs/postman. Import files in Postman.
 
 ## 4)To start gateway:
 a)open terminal;
