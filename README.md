@@ -23,7 +23,7 @@ b)execute command: cd products;
 </br>
 c)execute command: npm install (need to be executed once after project clone - to install packages);
 </br>
-d)execute command: npm run local;
+d)execute command: npm run local; (to run with production database use command: npm run prod)
 
 ## 6)Docker - (for Windows users - install Docker Desktop https://www.docker.com/products/docker-desktop)
 a)to build use command: docker-compose build 
