@@ -5,8 +5,9 @@ const { get } = pkg;
 
 export default async function productGetById(req, res) {
   const productId = get(req, 'params.productId');
+  const url = process.env.DOCKER_PRODUCTS_SERVICE_URL || process.env.PRODUCTS_SERVICE_URL;
 
-  axios.get(`${process.env.PRODUCTS_SERVICE_URL}/product/${productId}`)
+  axios.get(`${url}/product/${productId}`)
     .then((response) => {
       res.status(response.status).json(response.data);
     })

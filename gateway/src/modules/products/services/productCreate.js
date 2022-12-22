@@ -10,8 +10,9 @@ export default async function productCreate(req, res) {
   const currency = get(req, 'body.currency', 'usd');
   const productIsActive = get(req, 'body.productIsActive', true);
   const price = get(req, 'body.price', 0);
+  const url = process.env.DOCKER_PRODUCTS_SERVICE_URL || process.env.PRODUCTS_SERVICE_URL;
 
-  axios.post(`${process.env.PRODUCTS_SERVICE_URL}/product/create`, {
+  axios.post(`${url}/product/create`, {
     name,
     description,
     productImages,

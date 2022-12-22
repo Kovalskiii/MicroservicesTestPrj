@@ -5,8 +5,9 @@ const { get } = pkg;
 
 export default async function productDeleteById(req, res) {
   const productId = get(req, 'params.productId');
+  const url = process.env.DOCKER_PRODUCTS_SERVICE_URL || process.env.PRODUCTS_SERVICE_URL;
 
-  axios.delete(`${process.env.PRODUCTS_SERVICE_URL}/product/${productId}`, {
+  axios.delete(`${url}/product/${productId}`, {
   })
     .then((response) => {
       res.status(response.status).json(response.data);

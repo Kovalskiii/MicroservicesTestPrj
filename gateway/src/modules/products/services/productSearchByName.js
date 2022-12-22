@@ -5,8 +5,9 @@ const { get } = pkg;
 
 export default async function productSearchByName(req, res) {
   const name = get(req, 'body.name','');
+  const url = process.env.DOCKER_PRODUCTS_SERVICE_URL || process.env.PRODUCTS_SERVICE_URL;
 
-  axios.post(`${process.env.PRODUCTS_SERVICE_URL}/product/searchByName`, {
+  axios.post(`${url}/product/searchByName`, {
     name
   })
     .then((response) => {

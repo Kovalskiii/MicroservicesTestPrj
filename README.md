@@ -7,7 +7,7 @@ Local mongo connection string : mongodb://127.0.0.1:27017/MicroservicesTestPrj
 </br>
 ## 3)Postman collection and environment is located in docs/postman. Import files in Postman.
 
-## 4)To start gateway:
+## 4)To start gateway locally:
 a)open terminal;
 </br>
 b)execute command: cd gateway;
@@ -16,7 +16,7 @@ c)execute command: npm install (need to be executed once after project clone - t
 </br>
 d)execute command: npm run local
 
-## 5)To start products server:
+## 5)To start products server locally:
 a)open second terminal;
 </br>
 b)execute command: cd products;

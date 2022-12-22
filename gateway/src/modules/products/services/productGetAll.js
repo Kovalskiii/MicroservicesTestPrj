@@ -2,7 +2,9 @@ import message from '../../core/messages.js';
 import axios from "axios";
 
 export default async function productGetAll(req, res) {
-  axios.get(`${process.env.PRODUCTS_SERVICE_URL}/product/getAll`)
+  const url = process.env.DOCKER_PRODUCTS_SERVICE_URL || process.env.PRODUCTS_SERVICE_URL;
+
+  axios.get(`${url}/product/getAll`)
     .then((response) => {
       res.status(response.status).json(response.data);
     })
